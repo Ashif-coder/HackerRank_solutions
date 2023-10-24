@@ -56,3 +56,19 @@ if __name__ == '__main__':
         fptr.write(result + '\n')
 
     fptr.close()
+
+'''
+Explaination
+
+* Initialize variables la and lb to store the lengths of strings 'a' and 'b', respectively.
+* Append a character 'z' to both 'a' and 'b' to ensure proper string comparison during merging.
+* Initialize two pointers, i and j, to keep track of the current positions within 'a' and 'b', respectively.
+* Initialize an empty string res to store the resulting merged string.
+* Iterate through both 'a' and 'b' while comparing the remaining unprocessed portions.
+* In each iteration, compare the remaining substrings starting from 'i' in 'a' and 'j' in 'b'.
+* Append the smaller of the two substrings to the result string res.
+* Increment the corresponding pointer (i or j) to the next character for the chosen substring.
+* After the loop, concatenate any remaining characters in 'a' (excluding the appended 'z') and 'b' (excluding the appended 'z') to the result string res.
+* The function returns the merged lexicographically minimal string res.
+
+'''
