@@ -49,3 +49,14 @@ if __name__ == '__main__':
         fptr.write(result + '\n')
 
     fptr.close()
+
+'''
+Explaination
+
+Locating the rightmost character i such that w[i] < w[i+1].
+Swapping w[i] with the smallest character to the right that is greater than w[i].
+Reversing the portion of the string to the right of i.
+Returning the resulting string as the answer.
+
+
+'''
