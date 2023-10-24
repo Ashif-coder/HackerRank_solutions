@@ -92,3 +92,19 @@ if __name__ == '__main__':
         fptr.write(str(result) + '\n')
 
     fptr.close()
+
+'''
+Explaination
+
+chash calculates the hash value of a string.
+hmap computes a list of hash values for the prefix of a given string.
+hrange determines the hash value within a specific range of a string.
+
+The count function takes two strings s1 and s2, and their reversed versions s1rev and s2rev.
+It calculates and counts provinces based on different combinations of these strings.
+By examining various substrings and their hash values, it identifies unique provinces.
+
+This is the main function for counting provinces.
+It takes two strings, s1 and s2, representing a province.
+It computes the count of provinces by calling the count function for different combinations of the input strings.
+'''
