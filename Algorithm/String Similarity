@@ -40,3 +40,8 @@ if __name__ == '__main__':
         fptr.write(str(result) + '\n')
 
     fptr.close()
+'''
+The stringSimilarity function computes a list z where z[i] represents the length of the longest common prefix between S and the suffix starting at index i.
+It iterates through the string S to calculate the z values.
+The result is the sum of all z values plus the length of the original string.
+'''
