@@ -16,16 +16,19 @@ import sys
 #
 
 def climbingLeaderboard(ranked, player):
-    unique_ranked = sorted(set(ranked), reverse=True)
-    result = []
+    unique_ranked = sorted(set(ranked), reverse=True) #Here, the code first converts the ranked list into a set to eliminate duplicate scores. Then, it sorts this unique set in descending order (from high to low) and stores the result in the unique_ranked list. This list represents the unique, sorted scores on the leaderboard.
 
-    i = len(unique_ranked) - 1  
+    result = [] #result is an empty list that will store the player's ranks.
+
+    i = len(unique_ranked) - 1   #i is initialized to the index of the last element in the unique_ranked list.
     for score in player:
         while i >= 0 and score >= unique_ranked[i]:
             i -= 1
-        result.append(i + 2) 
-
-    return result
+    #It enters a while loop that checks if i is greater than or equal to 0 and if the player's score is greater than or equal to the score at the current index i in the unique_ranked list.
+    #If both conditions are met, it decrements i by 1, effectively moving to the next lower score in the unique_ranked list until the player's score is less than the score at the current index or until i reaches -1.     
+   result.append(i + 2) 
+    #Once the player's rank is determined, it appends i + 2 to the result list. Adding 2 ensures that the rank starts at 1 for the first player and increments accordingly.
+   return result
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
@@ -44,3 +47,7 @@ if __name__ == '__main__':
     fptr.write('\n')
 
     fptr.close()
+
+
+
+
