@@ -53,7 +53,7 @@ if __name__ == '__main__':
     fptr.close()
 
 '''
-
+Explaination
 Remove spaces from the input string s.
 Calculate the number of rows and columns for the grid to fit the text, ensuring the grid's area is at least as large as the text length.
 Populate a grid with characters from the input string.
