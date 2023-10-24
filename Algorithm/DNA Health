@@ -70,3 +70,52 @@ if __name__ == "__main__":
         hMin, hMax = min(hMin, h), max(hMax, h)
 
     print(hMin, hMax)
+
+#Explaination
+'''
+
+Binary Search Functions (bLeft and bRight):
+
+bLeft and bRight are binary search functions. They take a sorted array arr and a value val as input.
+bLeft returns the leftmost index where the value is greater than or equal to val.
+bRight returns the leftmost index where the value is strictly greater than val.
+getHealth Function:
+
+getHealth calculates the total health value of a DNA strand (seq) within a specified range of genes.
+It uses nested loops to iterate through all possible substrings of the DNA strand.
+For each substring, it checks if it exists in the subs set, and if it does, it looks up the health values associated with that gene using the gMap dictionary.
+It calculates the health value of the DNA strand by taking the difference between the cumulative health values of the genes within the specified range (first to last).
+The total health value is accumulated and returned.
+Main Block:
+
+The code execution starts in the main block, which reads input from the user.
+Input Processing:
+
+The code reads the following input:
+The number of genes, howGenes.
+The genes as a space-separated string, genes.
+The health values of the genes as a space-separated list of integers, healths.
+The number of DNA strands, howStrands.
+Data Structures Initialization:
+
+The code initializes two data structures:
+gMap: A defaultdict that maps genes to their indices and cumulative health values.
+subs: A set to store gene substrings.
+Populating gMap and subs:
+
+The code then iterates through the genes and creates entries in gMap for each gene. It also populates subs with substrings of the genes.
+It calculates the cumulative health values of each gene's substring and stores them in the gMap.
+Determine the Largest Gene:
+
+The code calculates the length of the largest gene in the genes list and stores it in largest.
+Iterating through DNA Strands:
+
+The code enters a loop to process each DNA strand.
+For each strand, it reads the first and last values, as well as the DNA strand itself.
+It calls the getHealth function to calculate the health value of the DNA strand within the specified gene range.
+It keeps track of the minimum and maximum health values (hMin and hMax) across all DNA strands.
+Output:
+
+Finally, the code prints the minimum and maximum health values (hMin and hMax) across all DNA strands.
+
+'''
