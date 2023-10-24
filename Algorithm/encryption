@@ -1,0 +1,53 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'encryption' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts STRING s as parameter.
+#
+
+def encryption(s):
+    # Write your code here
+    s = s.replace(" ", "")
+
+    L = len(s)
+    rows = math.floor(math.sqrt(L))
+    columns = math.ceil(math.sqrt(L))
+    while rows * columns < L:
+        if rows < columns:
+            rows += 1
+        else:
+            columns += 1
+    grid = [['' for _ in range(columns)] for _ in range(rows)]
+    index = 0
+    for i in range(rows):
+        for j in range(columns):
+            if index < L:
+                grid[i][j] = s[index]
+                index += 1
+    encrypted_text = ''
+    for j in range(columns):
+        for i in range(rows):
+            encrypted_text += grid[i][j]
+
+        encrypted_text += ' '
+
+    return encrypted_text.strip()
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = encryption(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
