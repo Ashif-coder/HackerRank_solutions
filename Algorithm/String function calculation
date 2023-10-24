@@ -126,3 +126,21 @@ if __name__ == '__main__':
     fptr.write(str(result) + '\n')
 
     fptr.close()
+
+'''
+Explaination
+
+Suffix Array and LCP:
+The code uses a suffix array and the Longest Common Prefix (LCP) array to efficiently process the input string.
+The suffix array represents the lexicographical order of all the suffixes of the string.
+The LCP array stores the length of the longest common prefix between adjacent suffixes in the suffix array.
+
+maxValue Function:
+This is the main function that calculates the maximum value of the string t.
+It first computes the suffix array and LCP array for the input string t.
+
+Iterating and Counting:
+It iterates through the elements of the LCP array, finding groups of adjacent elements with the same LCP value.
+For each such group, it calculates the maximum score based on the LCP value and the count of elements in the group.
+The maximum score is updated if a higher score is found.
+'''
