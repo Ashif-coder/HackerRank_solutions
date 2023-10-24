@@ -51,3 +51,12 @@ if __name__ == '__main__':
     fptr.write(result + '\n')
 
     fptr.close()
+
+'''
+
+Remove spaces from the input string s.
+Calculate the number of rows and columns for the grid to fit the text, ensuring the grid's area is at least as large as the text length.
+Populate a grid with characters from the input string.
+Extract the characters from the grid column by column to form the encrypted text.
+
+'''
