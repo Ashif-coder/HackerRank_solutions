@@ -31,6 +31,13 @@ def extraLongFactorials(n):
     result_str = ''.join(map(str, result[::-1]))
     print(result_str)
 
+
+
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    extraLongFactorials(n)
+
 '''
 Explaination
 
@@ -40,8 +47,3 @@ During each multiplication, handle the carry operation.
 Convert the result list to a string and print it.
 
 '''
-
-if __name__ == '__main__':
-    n = int(input().strip())
-
-    extraLongFactorials(n)
