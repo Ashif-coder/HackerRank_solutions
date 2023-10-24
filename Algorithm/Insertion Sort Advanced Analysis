@@ -79,3 +79,35 @@ if __name__ == '__main__':
         fptr.write(str(result) + '\n')
 
     fptr.close()
+
+#Explaination
+'''
+* merge_and_count Function:
+
+Merges two sorted halves of an array while counting inversions (shifts).
+Parameters:
+arr: Input array.
+temp: Temporary array for merging.
+left: Start of the left half.
+mid: End of the left half and start of the right half.
+right: End of the right half.
+Compares elements and counts shifts during merging, then copies merged elements to arr.
+merge_sort_and_count Function:
+
+* Recursively sorts and counts inversions (shifts) in an array using Merge Sort.
+Parameters:
+arr: Input array.
+temp: Temporary array for merging.
+left: Start of the current subarray.
+right: End of the current subarray.
+Splits array into halves, sorts each, and merges with merge_and_count.
+Returns the total count of inversions.
+insertionSort Function:
+
+* Main function for counting shifts in an array.
+Parameter:
+arr: Input array to be sorted.
+Creates a temporary array temp for merging.
+Calls merge_sort_and_count to calculate the number of shifts.
+Returns the count of shifts.
+'''
