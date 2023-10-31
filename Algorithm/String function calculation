@@ -62,8 +62,6 @@ def suffix_matrix_best(s):
         k <<= 1
     return ans
 
-def suffix_array_alternative_naive(s):
-    return [rank for suffix, rank in sorted((s[i:], i) for i in range(len(s)))]
 
 def lcp(sm, i, j):
     n = len(sm[-1])
